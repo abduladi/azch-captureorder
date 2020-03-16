@@ -5,8 +5,8 @@ variables:
   - name: dockerRegistryServiceConnection
     value: 'DockerRegistrySC' # make sure it matches the name you used in the service connection
   
-  - name: acrEndpoint
-    value: 'index.docker.io/v1/' # replace with container registry endpoint
+  # - name: acrEndpoint
+  #   value: 'index.docker.io/v1/' # replace with container registry endpoint
 
   - name: tag
     value: '$(Build.BuildId)'
