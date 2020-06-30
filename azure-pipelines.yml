@@ -3,7 +3,7 @@ variables:
   - group: captureorder-variables # Variable Group containing 'mongoHost', 'mongoUser' and the secret 'mongoPassword'
 
   - name: dockerRegistryServiceConnection
-    value: 'DockerRegistrySC' # make sure it matches the name you used in the service connection
+    value: 'ECORegistry' # make sure it matches the name you used in the service connection
   
   - name: acrEndpoint
     value: 'aksacreco.azurecr.io' # replace with container registry endpoint
@@ -24,7 +24,7 @@ stages:
       displayName: Build and push an image to container registry
       inputs:
         command: buildAndPush
-        repository: abdulwahabadi/captureorder
+        repository: $(imageRepository)
         dockerfile: '**/Dockerfile'
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: $(tag)
