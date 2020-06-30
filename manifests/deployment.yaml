@@ -14,7 +14,7 @@ spec:
       spec:
         containers:
         - name: captureorder
-          image: aksacreco.azurecr.io/captureorder:latest # replace with your own repository. Due to a bug,  leave the :placeholdertag tag in there to allow the pipeline to replace it
+          image: aksacrfbn.azurecr.io/captureorder:latest # replace with your own repository. Due to a bug,  leave the :placeholdertag tag in there to allow the pipeline to replace it
           imagePullPolicy: Always
           readinessProbe:
             httpGet:
